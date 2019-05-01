@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Scribbler - a codding landing page template for codrops</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
-        <link rel="stylesheet" href="{{ asset('scribbler/scribbler-global.css') }} ">
-        <link rel="stylesheet" href="{{ asset('scribbler/scribbler-global.css') }}">
-        <link rel="author" href="humans.txt">
-    </head>
-    <body>
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Scribbler - a codding landing page template for codrops</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="{{ asset('scribbler/scribbler-global.css') }}">
+      <link rel="stylesheet" href="{{ asset('scribbler/scribbler-landing.css') }}">
+      <link rel="author" href="humans.txt">
+  </head>
+  <body>
     <nav>
       <div class="logo"></div>
       <ul class="menu">
