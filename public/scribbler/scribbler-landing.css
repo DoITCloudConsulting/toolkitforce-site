@@ -1,8 +1,8 @@
 /* nav specialized to landing page */
 .logo {
-  background: url('{{ asset('scribbler/logo.svg') }}') no-repeat;
+  background: url('http://doitcloudconsulting.mx/img/core/doit_logo.png') no-repeat;
   background-size: contain;
-  margin: 1rem 0 0 1rem;
+  margin: 0.1rem 0 0 0.3rem;
 }
 
 nav {
