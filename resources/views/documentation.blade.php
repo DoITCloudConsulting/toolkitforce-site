@@ -28,7 +28,7 @@
           <li class="js-btn selected">Get Started</li>
           <li class="js-btn">Configuration</li>
 
-          == The basics ==
+          / The basics
 
           <li class="js-btn">Inserts</li>
           <li class="js-btn">Updates</li>
@@ -39,13 +39,13 @@
           <li class="js-btn">SOQL</li>
           <li class="js-btn">SOSL</li>
 
-          == The Metadata Methods ==
+          / The Metadata Methods
           
           <li class="js-btn">Describe Global</li>
           <li class="js-btn">Describe layout</li>
           <li class="js-btn">Describe SObject</li>
 
-          == Other methods ==
+          / Other methods
 
           <li class="js-btn">Server Requirements</li>
           <li class="js-btn">Issues</li>
