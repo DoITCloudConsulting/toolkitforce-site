@@ -1,4 +1,4 @@
-<p align="center"><img src="http://www.doitcloudconsulting.mx/img/home-img/doit_logo_white.png"></p>
+<p align="center"><img width="50%" src="http://doitcloudconsulting.mx/img/core/doit_logo.png"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
