@@ -50,7 +50,6 @@
       </div>
 
 
-      @include('sections.features')
 
       
 
