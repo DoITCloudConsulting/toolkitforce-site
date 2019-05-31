@@ -10,11 +10,12 @@
         <li>Search / SOSL <span class="keybinding__label">$salesforce->sosl('Find {doit} Returning Acc..')</span></li>
     </ul>
     <ul class="keybinding__detail">
-        <h3 class="keybinding__title">Markdown Keybindings</h3>
-        <li><span class="keybinding__label">Ctrl+A</span> Insert Link Markdown</li>
-        <li><span class="keybinding__label">Ctrl+I</span> Insert Image Markdown</li>
-        <li><span class="keybinding__label">Ctrl+V</span> Insert YouTube Video</li>
-        <li><span class="keybinding__label">Ctrl+T</span> Insert Table</li>
+        <h3 class="keybinding__title">Metadata functions</h3>
+        <li><span class="keybinding__label">$salesforce->describeGlobal();</span> Describe Global </li>
+        <li><span class="keybinding__label">$salesforce->describeLayout('Account');</span> Describe layout</li>
+        <li><span class="keybinding__label">$salesforce->describeSObject('Account');</span> Describe SObject</li>
+        <li><span class="keybinding__label">$salesforce->getMeAllUpdated('Case', '08-04-2019', '30-04-2019');</span> Get me all updated</li>
+        <li><span class="keybinding__label">$salesforce->getMeAllDeleted('Case', '08-04-2019', '30-04-2019');</span> Get me all Deleted</li>
     </ul>
 </div>
 <div class="callout">
