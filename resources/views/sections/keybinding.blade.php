@@ -1,8 +1,7 @@
 <div class="keybinding">
     <ul class="keybinding__detail">
         <h3 class="keybinding__title">DML Functions</h3>
-        <li>Insert <span class="keybinding__label">$salesforce = new Salesforce();
-$salesforce->insert(array('Name' => 'DoIT Acc FROM ToolKit'), 'Account');</span></li>
+        <li>Insert records <span class="keybinding__label">$salesforce->insert(array(...))</span></li>
         <li>Save <span class="keybinding__label">Cmd+S</span></li>
         <li>Save and Quit <span class="keybinding__label">Ctrl+D</span></li>
         <li>Undo <span class="keybinding__label">Cmd+Z</span></li>
