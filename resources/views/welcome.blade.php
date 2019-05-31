@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Scribbler - a codding landing page template for codrops</title>
+      <title>Toolkit Force</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
@@ -34,46 +34,23 @@
     </div>
     <div class="wrapper">
       <div class="installation">
-        <h3 class="section__title">Installation</h3>
-        <div class="tab__container">
-          <ul class="tab__menu">
-            <li class="tab active" data-tab="mac">Laravel</li>
-            <!-- <li class="tab" data-tab="linux">linux</li>
-            <li class="tab" data-tab="win">win</li> -->
-          </ul>
-          <pre class="nohighlight code">
-            <code class="tab__pane active mac">$  composer require doitcloudconsulting/salesforce</code>
-            <!-- <code class="tab__pane linux">$  apt-get install scribbler</code>
-            <code class="tab__pane win">$  gem install scribbler</code> -->
-          </pre>
-        </div>
+         <h3 class="section__title">Installation</h3>
+         <div class="tab__container">
+            <ul class="tab__menu">
+               <li class="tab active" data-tab="mac">Laravel</li>
+               <!-- <li class="tab" data-tab="linux">linux</li>
+               <li class="tab" data-tab="win">win</li> -->
+            </ul>
+            <pre class="nohighlight code">
+               <code class="tab__pane active mac">$  composer require doitcloudconsulting/salesforce</code>
+               <!-- <code class="tab__pane linux">$  apt-get install scribbler</code>
+               <code class="tab__pane win">$  gem install scribbler</code> -->
+            </pre>
+         </div>
       </div>
 
       @include('sections.features')
-
-      
-
-
-      <div class="keybinding">
-        <ul class="keybinding__detail">
-          <h3 class="keybinding__title">Default Keybindings</h3>
-          <li>Quit without saving <span class="keybinding__label">Ctrl+C</span></li>
-          <li>Save <span class="keybinding__label">Cmd+S</span></li>
-          <li>Save and Quit <span class="keybinding__label">Ctrl+D</span></li>
-          <li>Undo <span class="keybinding__label">Cmd+Z</span></li>
-        </ul>
-        <ul class="keybinding__detail">
-          <h3 class="keybinding__title">Markdown Keybindings</h3>
-          <li><span class="keybinding__label">Ctrl+A</span> Insert Link Markdown</li>
-          <li><span class="keybinding__label">Ctrl+I</span> Insert Image Markdown</li>
-          <li><span class="keybinding__label">Ctrl+V</span> Insert YouTube Video</li>
-          <li><span class="keybinding__label">Ctrl+T</span> Insert Table</li>
-        </ul>
-      </div>
-      <div class="callout">
-        <p>Read our documentation for advanced keybindings and customization</p>
-        <a href="doc.html" class="button--primary">Documentation</a>
-      </div>
+      @include('sections.keybinding')
     </div>
 
     @include('sections.changelog')
