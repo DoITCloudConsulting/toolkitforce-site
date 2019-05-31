@@ -2,9 +2,12 @@
     <ul class="keybinding__detail">
         <h3 class="keybinding__title">DML Functions</h3>
         <li>Insert records <span class="keybinding__label">$salesforce->insert(array(...))</span></li>
-        <li>Save <span class="keybinding__label">Cmd+S</span></li>
-        <li>Save and Quit <span class="keybinding__label">Ctrl+D</span></li>
-        <li>Undo <span class="keybinding__label">Cmd+Z</span></li>
+        <li>Update records <span class="keybinding__label">$salesforce->Update(array(...))</span></li>
+        <li>delete records <span class="keybinding__label">$salesforce->delete(array('001f400000yNY0LAAW'))</span></li>
+        <li>Undelete records <span class="keybinding__label">$salesforce->Undelete(array('001f400000yNY0LAAW'))</span></li>
+        <li>Upsert records <span class="keybinding__label">$salesforce->Upsert(array(...))</span></li>
+        <li>Queries <span class="keybinding__label">$salesforce->query('select Id, Name fro)</span></li>
+        <li>Search / SOSL records <span class="keybinding__label">$salesforce->sosl('Find {doit} Returning Acc..')</span></li>
     </ul>
     <ul class="keybinding__detail">
         <h3 class="keybinding__title">Markdown Keybindings</h3>
