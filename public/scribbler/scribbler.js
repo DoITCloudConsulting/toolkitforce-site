@@ -78,6 +78,7 @@ var sections = getAll('.js-section');
 
 function setActiveLink(event) {
   // remove all active tab classes
+  console.log(btns);
   for (var i = 0; i < btns.length; i++) {
     btns[i].classList.remove('selected');
   }
@@ -96,26 +97,34 @@ function smoothScrollTo(element, event) {
 }
 
 if (btns.length && sections.length > 0) {
-// for (var i = 0; i<btns.length; i++) {
-//   btns[i].addEventListener('click', function(event) {
-//     smoothScrollTo(sections[i], event);
-//   });
-// }
-  btns[0].addEventListener('click', function (event) {
-    smoothScrollTo(sections[0], event);
-  });
+  for (var i = 0; i<btns.length; i++) {
+    
+    btns[i].addEventListener('click', function(event) {
+      smoothScrollTo(sections[i], event);
+    });
+  }
 
-  btns[1].addEventListener('click', function (event) {
-    smoothScrollTo(sections[1], event);
-  });
+  
 
-  btns[2].addEventListener('click', function (event) {
-    smoothScrollTo(sections[2], event);
-  });
+  // btns[0].addEventListener('click', function (event) {
+  //   smoothScrollTo(sections[0], event);
+  // });
 
-  btns[3].addEventListener('click', function (event) {
-    smoothScrollTo(sections[3], event);
-  });
+  // btns[1].addEventListener('click', function (event) {
+  //   smoothScrollTo(sections[1], event);
+  // });
+
+  // btns[2].addEventListener('click', function (event) {
+  //   smoothScrollTo(sections[2], event);
+  // });
+
+  // btns[3].addEventListener('click', function (event) {
+  //   smoothScrollTo(sections[3], event);
+  // });
+
+  // btns[4].addEventListener('click', function (event) {
+  //   smoothScrollTo(sections[4], event);
+  // });
 }
 
 // fix menu to page-top once user starts scrolling

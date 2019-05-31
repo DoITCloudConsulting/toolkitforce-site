@@ -14,8 +14,8 @@
         <li><span class="keybinding__label">$salesforce->describeGlobal();</span> Describe Global </li>
         <li><span class="keybinding__label">$salesforce->describeLayout('Account');</span> Describe layout</li>
         <li><span class="keybinding__label">$salesforce->describeSObject('Account');</span> Describe SObject</li>
-        <li><span class="keybinding__label">$salesforce->getMeAllUpdated('Case', '08-04-2019', '30-04-2019');</span> Get me all updated</li>
-        <li><span class="keybinding__label">$salesforce->getMeAllDeleted('Case', '08-04-2019', '30-04-2019');</span> Get me all Deleted</li>
+        <li><span class="keybinding__label">$salesforce->getMeAllUpdated('Case', 'start', 'end');</span> Get me all updated</li>
+        <li><span class="keybinding__label">$salesforce->getMeAllDeleted('Case', 'start', 'end');</span> Get me all Deleted</li>
     </ul>
 </div>
 <div class="callout">
