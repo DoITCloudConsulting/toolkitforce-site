@@ -18,3 +18,4 @@ Route::get('/', function () {
 Route::get('/documentation', function () {
     return view('documentation');
 });
+URL::forceScheme('https');
