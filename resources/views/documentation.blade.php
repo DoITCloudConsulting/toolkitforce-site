@@ -469,7 +469,7 @@
         </section>
         <section class="js-section">
           <h3 class="section__title">Convert Lead</h3>
-          <p>The toolkitforce updateeach record update:</p>
+          <p>The ConverLead method is amazing, the method let you create the account, contact and Opportunity:</p>
 
           <div class="code__block code__block--notabs">
             <pre class="code code--block">
@@ -488,7 +488,7 @@
               </code>
             </pre>
           </div>
-          
+
         </section>
         <section class="js-section">
           <h3 class="section__title">Get me all updated</h3>
