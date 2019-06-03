@@ -102,34 +102,76 @@ function byId(id) {
 }
 
 if (btns.length && sections.length > 0) {
-  for (var i = 0; i<btns.length; i++) {
+  // for (var i = 0; i<btns.length; i++) {
 
-      btns[i].addEventListener('click', function(event) {
-        smoothScrollTo(sections[i], event);
-      });
-  }
+  //     btns[i].addEventListener('click', function(event) {
+  //       smoothScrollTo(sections[i], event);
+  //     });
+  // }
 
   
 
-  // btns[0].addEventListener('click', function (event) {
-  //   smoothScrollTo(sections[0], event);
-  // });
+  btns[0].addEventListener('click', function (event) {
+    smoothScrollTo(sections[0], event);
+  });
 
-  // btns[1].addEventListener('click', function (event) {
-  //   smoothScrollTo(sections[1], event);
-  // });
+  btns[1].addEventListener('click', function (event) {
+    smoothScrollTo(sections[1], event);
+  });
 
-  // btns[2].addEventListener('click', function (event) {
-  //   smoothScrollTo(sections[2], event);
-  // });
+  btns[2].addEventListener('click', function (event) {
+    smoothScrollTo(sections[2], event);
+  });
 
-  // btns[3].addEventListener('click', function (event) {
-  //   smoothScrollTo(sections[3], event);
-  // });
+  btns[3].addEventListener('click', function (event) {
+    smoothScrollTo(sections[3], event);
+  });
 
-  // btns[4].addEventListener('click', function (event) {
-  //   smoothScrollTo(sections[4], event);
-  // });
+  btns[4].addEventListener('click', function (event) {
+    smoothScrollTo(sections[4], event);
+  });
+  btns[5].addEventListener('click', function (event) {
+    smoothScrollTo(sections[5], event);
+  });
+  btns[6].addEventListener('click', function (event) {
+    smoothScrollTo(sections[6], event);
+  });
+  btns[7].addEventListener('click', function (event) {
+    smoothScrollTo(sections[7], event);
+  });
+  btns[8].addEventListener('click', function (event) {
+    smoothScrollTo(sections[8], event);
+  });
+  btns[9].addEventListener('click', function (event) {
+    smoothScrollTo(sections[9], event);
+  });
+  btns[10].addEventListener('click', function (event) {
+    smoothScrollTo(sections[10], event);
+  });
+  btns[11].addEventListener('click', function (event) {
+    smoothScrollTo(sections[11], event);
+  });
+  btns[12].addEventListener('click', function (event) {
+    smoothScrollTo(sections[12], event);
+  });
+  btns[13].addEventListener('click', function (event) {
+    smoothScrollTo(sections[13], event);
+  });
+  btns[14].addEventListener('click', function (event) {
+    smoothScrollTo(sections[14], event);
+  });
+  btns[15].addEventListener('click', function (event) {
+    smoothScrollTo(sections[15], event);
+  });
+  btns[16].addEventListener('click', function (event) {
+    smoothScrollTo(sections[16], event);
+  });
+  btns[17].addEventListener('click', function (event) {
+    smoothScrollTo(sections[17], event);
+  });
+  btns[18].addEventListener('click', function (event) {
+    smoothScrollTo(sections[18], event);
+  });
 }
 
 // fix menu to page-top once user starts scrolling

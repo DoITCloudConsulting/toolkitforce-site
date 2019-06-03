@@ -37,40 +37,40 @@
         <li class="menu__item"><a href="/" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
       </ul>
     </nav>
-    <input type="hidden" id="hiddenId" value="">
+
     <div class="wrapper">
       <aside class="doc__nav">
         <ul>
-          <li class="js-btn selected" onclick="byId('hiddenId').value = this.id;" id="Get_Started">Get Started</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Installation">Installation</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Configuration">Configuration</li>
+          <li class="js-btn selected" id="Get_Started">Get Started</li>
+          <li class="js-btn" id="Installation">Installation</li>
+          <li class="js-btn" id="Configuration">Configuration</li>
 
           <b><i> / The basics </i></b>
 
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Inserts" >Inserts</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Updates" >Updates</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Upserts" >Upserts</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Deletes" >Deletes</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Undeletes" >Undeletes</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Validations" >Validations</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="SOQL" >SOQL</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="SOSL" >SOSL</li>
+          <li class="js-btn" id="Inserts" >Inserts</li>
+          <li class="js-btn" id="Updates" >Updates</li>
+          <li class="js-btn" id="Upserts" >Upserts</li>
+          <li class="js-btn" id="Deletes" >Deletes</li>
+          <li class="js-btn" id="Undeletes" >Undeletes</li>
+          <li class="js-btn" id="Validations" >Validations</li>
+          <li class="js-btn" id="SOQL" >SOQL</li>
+          <li class="js-btn" id="SOSL" >SOSL</li>
 
           <b><i>/ The Metadata Methods</i></b>
           
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Describe_Global">Describe Global</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Describe_layout">Describe layout</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Describe_SObject">Describe SObject</li>
+          <li class="js-btn" id="Describe_Global">Describe Global</li>
+          <li class="js-btn" id="Describe_layout">Describe layout</li>
+          <li class="js-btn" id="Describe_SObject">Describe SObject</li>
 
           <b><i>/ Other methods</i></b>
 
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Convert_Lead">Convert Lead</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Get_me_all_updated">Get me all updated</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Get_me_all_Deleted">Get me all Deleted</li>
+          <li class="js-btn" id="Convert_Lead">Convert Lead</li>
+          <li class="js-btn" id="Get_me_all_updated">Get me all updated</li>
+          <li class="js-btn" id="Get_me_all_Deleted">Get me all Deleted</li>
 
           <b><i>/ More</i></b>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Server_Requirements">Server Requirements</li>
-          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Issues">Issues</li>
+          <li class="js-btn" id="Server_Requirements">Server Requirements</li>
+          <li class="js-btn" id="Issues">Issues</li>
         </ul>
       </aside>
       <article class="doc__content">
@@ -298,16 +298,60 @@
 
         <section class="js-section">
           <h3 class="section__title">Upserts</h3>
-          <p>The toolkitforce updateeach record update:</p>
+          <p>Like as an update action or creation, the upsert action will let you (in only once transaction) identify which record contains an Id or external Id field to update or create when don't have some of the before.</p>
+
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $salesforce = new Salesforce();
+                $salesforce->update(array('Name' => 'DoIT Acc ', 'id' => '001f400000yNY0LAAW'), 'Account');
+              </code>
+            </pre>
+          </div>
+          OR
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $salesforce = new Salesforce();
+                $salesforce->upsert(array(
+                  &nbsp;&nbsp; array('Name' => 'Acc1'),
+                  &nbsp;&nbsp; array('Name' => 'Acc2'),
+                  &nbsp;&nbsp; array('Name' => 'Acc2', 'Phone' => 192837465, 'id' => '001f400000yNY0LAAW'),
+                  ), 'Account');
+              </code>
+            </pre>
+          </div>
+
         </section>
         <section class="js-section">
           <h3 class="section__title">Deletes</h3>
-          <p>The toolkitforce updateeach record update:</p>
+          <p>If you need remove database information, the toolkitforce provide an easy way to do it. The delete action need an array of ids to remove all record of salesforce database in only once transaction. </p>
+
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $salesforce = new Salesforce();
+                $salesforce->delete(array('001f400000yNY0LAAW', '001f400130TMY0L5AW', ...));
+              </code>
+            </pre>
+          </div>
+
         </section>
         <section class="js-section">
           <h3 class="section__title">Undeletes</h3>
-          <p>The toolkitforce updateeach record update:</p>
+          <p>Undelete method work like as method Delete with an array of ids but it make a rollback of information deleted on Salesforce Database.</p>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $salesforce = new Salesforce();
+                $salesforce->undelete(array('001f400000yNY0LAAW', '001f400130TMY0L5AW', ...));
+              </code>
+            </pre>
+          </div>
+
         </section>
+
+        
         <section class="js-section">
           <h3 class="section__title">Validations</h3>
           <p>The toolkitforce updateeach record update:</p>
