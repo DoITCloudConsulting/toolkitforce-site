@@ -351,34 +351,144 @@
 
         </section>
 
-        
+
         <section class="js-section">
           <h3 class="section__title">Validations</h3>
-          <p>The toolkitforce updateeach record update:</p>
+          <p>The validations on data fields work setting it on the config file in <span class="keybinding__label">onfig/SalesforceConfig.php</span>. The objective is validate basic information before the API Call is executed, it will save up transactions and not take development time in validations that verify the formats.</p>
+
+          <p>The validations apply to Inserts, Updates, Upserts methods.</p>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                
+                    /*
+                      |--------------------------------------------------------------------------
+                      | Validation fields
+                      |--------------------------------------------------------------------------
+                      |
+                      | This section let you validate data before you execute a call to 
+                      | salesforce, it is reviewed before the API Call to salesforce would be 
+                      | executed.
+                      | 
+                      | You can add custom fields with the API Name (don't forget the 
+                      | __c prefix), isn't necessary especify the 
+                      | object.
+                      */
+                    'Validation_Fields' => [
+                          &nbsp;&nbsp; 'phones'  => ['Phone', 'MobilePhone', 'AssistantPhone', 'HomePhone'],
+                          &nbsp;&nbsp; 'emails'  => ['Email'],
+                          &nbsp;&nbsp; 'dates'   &nbsp;=> ['Birthdate', 'CloseDate'],
+                          &nbsp;&nbsp; 'url'  &nbsp;&nbsp;    => ['Website']
+                    ]
+
+              </code>
+            </pre>
+          </div>
+
         </section>
         <section class="js-section">
           <h3 class="section__title">SOQL</h3>
-          <p>The toolkitforce updateeach record update:</p>
+          <p>The soql query structure is same that an query maked with apex, the benefit that use toolkitforce instead of toolkit php standard of salesforce is the results, if you want the result can be returned on <b>JSON, Base64 or StdClass</b> format you just need specefy it.</p>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $salesforce = new Salesforce();
+                $salesforce->query('select Id, Name from Account limit 10');
+              </code>
+            </pre>
+          </div>
+          OR 
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $salesforce = new Salesforce();
+                $salesforce->query('select Id, Name from Account limit 10', 'json|base64|object');
+              </code>
+            </pre>
+          </div>
+
         </section>
         <section class="js-section">
-          <h3 class="section__title">SOSL</h3>
-          <p>The toolkitforce updateeach record update:</p>
+          <h3 class="section__title">Searches / SOSL</h3>
+          <p>The SOSL query structure is same that an query maked with apex, the benefit that use toolkitforce instead of toolkit php standard of salesforce is the results, if you want the result can be returned on <b>JSON, Base64 or StdClass</b> format you just need specefy it.</p>
+
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $salesforce = new Salesforce();
+                $salesforce->sosl('Find {doit} Returning Account(name), lead(name, phone)');
+              </code>
+            </pre>
+          </div>
+
+          
         </section>
         <section class="js-section">
           <h3 class="section__title">Describe Global</h3>
-          <p>The toolkitforce updateeach record update:</p>
+          <p>Describe Global (stdClass of objects custom and standard with their properties).</p>
+
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $salesforce = new Salesforce();
+                $salesforce->describeGlobal();
+              </code>
+            </pre>
+          </div>
+          
+
+
         </section>
         <section class="js-section">
           <h3 class="section__title">Describe layout</h3>
-          <p>The toolkitforce updateeach record update:</p>
+          <p>Retrieve metadata about page layouts for the specified object type.</p>
+
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $salesforce = new Salesforce();
+                $salesforce->describeLayout('Account');
+              </code>
+            </pre>
+          </div>
+
         </section>
         <section class="js-section">
           <h3 class="section__title">Describe SObject</h3>
-          <p>The toolkitforce updateeach record update:</p>
+          <p>Retrieves metadata (field list and object properties) for the specified object type.</p>
+
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $salesforce = new Salesforce();
+                $salesforce->describeSObject('Account');
+              </code>
+            </pre>
+          </div>
+
         </section>
         <section class="js-section">
           <h3 class="section__title">Convert Lead</h3>
           <p>The toolkitforce updateeach record update:</p>
+
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $salesforce = new Salesforce();
+
+                $lead = $salesforce->insert(
+                        array('lastname' => 'Homerito Hernández', 
+                              'Email' => 'homerito@doitcloud.mx', 
+                              'Phone' => 1234588892, 
+                              'Company' => 'DoIT Cloud Consulting'
+                          ), 'Lead');
+
+                $salesforce->convertLead($lead->id, 'Closed - Converted');
+
+              </code>
+            </pre>
+          </div>
+          
         </section>
         <section class="js-section">
           <h3 class="section__title">Get me all updated</h3>

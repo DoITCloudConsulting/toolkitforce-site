@@ -20,5 +20,7 @@
 </div>
 <div class="callout">
     <p>Read our documentation for advanced functions and customizations</p>
-    <a href="doc.html" class="button--primary">Documentation</a>
+    <a href="/documentation" class="button--primary">Documentation</a>
 </div>
+
+
