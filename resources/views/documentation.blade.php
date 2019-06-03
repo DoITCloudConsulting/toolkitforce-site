@@ -23,6 +23,9 @@
       }
     </style>
     <link rel="author" href="humans.txt">
+    <script type="text/javascript">
+
+    </script>
   </head>
   <body>
     <div class="doc__bg"></div>
@@ -34,39 +37,40 @@
         <li class="menu__item"><a href="/" class="link link--dark"><i class="fa fa-home"></i> Home</a></li>
       </ul>
     </nav>
+    <input type="hidden" id="hiddenId" value="">
     <div class="wrapper">
       <aside class="doc__nav">
         <ul>
-          <li class="js-btn selected">Get Started</li>
-          <li class="js-btn">Installation</li>
-          <li class="js-btn">Configuration</li>
+          <li class="js-btn selected" onclick="byId('hiddenId').value = this.id;" id="Get_Started">Get Started</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Installation">Installation</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Configuration">Configuration</li>
 
           <b><i> / The basics </i></b>
 
-          <li class="js-btn">Inserts</li>
-          <li class="js-btn">Updates</li>
-          <li class="js-btn">Upserts</li>
-          <li class="js-btn">Deletes</li>
-          <li class="js-btn">Undeletes</li>
-          <li class="js-btn">Validations</li>
-          <li class="js-btn">SOQL</li>
-          <li class="js-btn">SOSL</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Inserts" >Inserts</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Updates" >Updates</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Upserts" >Upserts</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Deletes" >Deletes</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Undeletes" >Undeletes</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Validations" >Validations</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="SOQL" >SOQL</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="SOSL" >SOSL</li>
 
           <b><i>/ The Metadata Methods</i></b>
           
-          <li class="js-btn">Describe Global</li>
-          <li class="js-btn">Describe layout</li>
-          <li class="js-btn">Describe SObject</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Describe_Global">Describe Global</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Describe_layout">Describe layout</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Describe_SObject">Describe SObject</li>
 
           <b><i>/ Other methods</i></b>
 
-          <li class="js-btn">Convert Lead</li>
-          <li class="js-btn">Get me all updated</li>
-          <li class="js-btn">Get me all Deleted</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Convert_Lead">Convert Lead</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Get_me_all_updated">Get me all updated</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Get_me_all_Deleted">Get me all Deleted</li>
 
           <b><i>/ More</i></b>
-          <li class="js-btn">Server Requirements</li>
-          <li class="js-btn">Issues</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Server_Requirements">Server Requirements</li>
+          <li class="js-btn" onclick="byId('hiddenId').value = this.id;" id="Issues">Issues</li>
         </ul>
       </aside>
       <article class="doc__content">

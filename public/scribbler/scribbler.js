@@ -1,3 +1,4 @@
+
 // utilities
 var get = function (selector, scope) {
   scope = scope ? scope : document;
@@ -96,12 +97,16 @@ function smoothScrollTo(element, event) {
   });
 }
 
+function byId(id) {
+  return document.getElementById(id);
+}
+
 if (btns.length && sections.length > 0) {
   for (var i = 0; i<btns.length; i++) {
-    
-    btns[i].addEventListener('click', function(event) {
-      smoothScrollTo(sections[i], event);
-    });
+
+      btns[i].addEventListener('click', function(event) {
+        smoothScrollTo(sections[i], event);
+      });
   }
 
   
@@ -154,5 +159,6 @@ window.addEventListener('load', function(){
       icon.classList.remove('open');
     }
   }
-  icon.addEventListener('click', showNav);
+  if(!icon == null)
+    icon.addEventListener('click', showNav);
 });
